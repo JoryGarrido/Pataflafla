@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="drummr">
+<html lang="en" ng-app="pataflafla">
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
 
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <script src="app.modules.js"></script>
+  <script src="app.module.js"></script>
   <script src="app.routes.js"></script>
 
   <script src="shared/header/headerDirective.js"></script>
+
+  <script src="components/landing/landingController.js"></script>
 </head>
 <body>
   <pff-Header></pff-Header>
+  <div ng-view></div>
 </body>
 </html>
