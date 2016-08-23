@@ -4,6 +4,6 @@ app.directive('pffHeader', function(){
   return{
     templateUrl:
     'shared/header/headerView.html',
-    controller: headerContoller
+    controller: headerController
   }
 });
