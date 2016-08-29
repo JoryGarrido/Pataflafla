@@ -1,5 +1,5 @@
 {
-  "name": "Drummr",
+  "name": "Diddle",
   "version": "1.0.0",
   "description": "Capstone",
   "main": "server.js",
@@ -11,7 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^0.8.7",
     "dotenv": "^2.0.0",
-    "jasmine": "^2.4.1"
+    "jasmine": "^2.4.1",
+    "knex": "^0.11.10",
+    "pg": "^6.1.0"
   }
 }
