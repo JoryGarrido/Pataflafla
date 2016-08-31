@@ -1,6 +1,6 @@
 var userManager = require('../lib/userManager.js');
 var user = {
-    email: "bob@bob.com",
+    email: "john@bob.com",
     password: "password"
 }
 
@@ -16,23 +16,34 @@ describe('userManager.signup', function(){
     expect(typeof userManager.signup).toEqual('function');
   });
   it('successfully signs up a user', function(){
-    expect(userManager.signup(user).toEqual(true));
+    // expect(userManager.signup(user).toEqual(undefined));
   });
 });
 
-describe('userManager.getUsers', function(){
-  beforeEach(function(done) {
-    console.log(done);
-      setTimeout(function() {
-        value = 0;
-        done();
-      }, 1);
-    });
+// describe('userManager.getUsers', function(){
+//   beforeEach(function(done) {
+//     console.log(done);
+//       setTimeout(function() {
+//         value = 0;
+//         done();
+//       }, 1);
+//     });
+//
+//   it('has a getUsers function', function(){
+//     expect(typeof userManager.getUsers).toEqual('function');
+//   })
+//   it('gets all users successfully', function(){
+//     // expect(userManager.getUsers).toEqual('sdf');
+//   })
+// });
 
-  it('has a getUsers function', function(){
-    expect(typeof userManager.getUsers).toEqual('function');
+describe('userManager.login', function(){
+  it('has a login function', function(){
+    expect(typeof userManager.login).toEqual('function');
   })
-  it('gets all users successfully', function(){
-    expect(userManager.getUsers).toEqual('sdf');
+  it('signs a token to the user', function(){
+    expect(userManager.login().then(function(data){
+      if(data.data.token === PROCESS.env.secret);
+    })).toEqual(true);
   })
-});
+})

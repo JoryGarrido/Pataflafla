@@ -13,7 +13,3 @@ app.config(function($routeProvider) {
       controller: 'videopostController'
     });
 });
-
-module.exports.upload = function () {
-  
-}

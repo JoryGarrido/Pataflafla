@@ -1,20 +1,21 @@
 <main>
   <section>
     <h1>SignIn</h1>
-    <form class="" action="index.html" method="post">
+    <form ng-submit="login()">
       <label for="">Email</label>
-      <input type="email">
+      <input ng-model="loginEmail" type="email">
       <label for="">Password</label>
-      <input type="password">
+      <input ng-model="loginPassword" type="password">
+      <input type="submit">
     </form>
   </section>
   <section>
     <h1>SignUp</h1>
-    <form action="/signup" method="post" ng-submit="submit()">
+    <form ng-submit="signup()">
       <label for="">Email</label>
-      <input class="email" type="email">
+      <input ng-model="signupEmail" type="email">
       <label for="">Password</label>
-      <input class="password" type="password">
+      <input ng-model="signupPassword" type="password">
       <!-- <label for="">Confirm Password</label>
       <input type="password"> -->
       <input type="submit">
