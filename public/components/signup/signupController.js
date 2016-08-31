@@ -24,9 +24,17 @@ app.controller('signupController', function($scope, $http, $location){
     }).then(function successCallback(response) {
       localStorage.jwt = response.data.token;
       console.log("SUCCESS RESPONSE",response);
-      
       }, function errorCallback(response) {
         console.log("error response",response);
       });
+  }
+
+  $scope.test = function() {
+    $http.get('/protected').then(function (response) {
+      console.log(response);
+    })
+    .catch(function (err) {
+      console.log("ERROR");
+    });
   }
 });
