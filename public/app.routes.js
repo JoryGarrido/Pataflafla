@@ -11,5 +11,9 @@ app.config(function($routeProvider) {
     .when('/videopost', {
       templateUrl: 'components/videopost/videopostView.html',
       controller: 'videopostController'
+    })
+    .when('/video/:id', {
+      templateUrl: 'components/singleVideoPage/singleVideoPageView.html',
+      controller: 'singleVideoPageController'
     });
 });

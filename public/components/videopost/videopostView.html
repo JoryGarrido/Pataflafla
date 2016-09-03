@@ -1,13 +1,11 @@
 <main>
   <form ng-submit="videoPost()">
     <label for="">Title</label>
-    <input type="text">
+    <input ng-model="title" type="text">
     <label for="">Description</label>
-    <input type="text">
+    <input ng-model="description" type="text">
     <label for="">Video URL</label>
-    <input type="text">
-    <label for="">Image URL</label>
-    <input type="text">
+    <input ng-model="videoUrl" type="text">
     <input type="submit">
   </form>
 </main>
