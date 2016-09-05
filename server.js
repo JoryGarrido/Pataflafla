@@ -27,6 +27,7 @@ app.use(express.static('public'));
 app.post('/signup', userManager.signup);
 app.post('/login', userManager.login);
 app.get('/video/:id', videoManager.getVideoById);
+app.get('/videolist', videoManager.getAllVideos);
 
 app.use(userManager.verify);
 
