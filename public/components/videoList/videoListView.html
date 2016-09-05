@@ -1,5 +1,5 @@
 <section id="videoListContainer">
-  <div class="video" ng-repeat="video in view.videos">
+  <div class="video" ng-repeat="video in view.videos" ng-click="goToVid(video.video_url);">
     <div class="fakeImg"></div>
     <p class="listTitle">{{video.name}}</p>
     <p class="description">{{video.description}}</p>
