@@ -6,6 +6,9 @@ app.directive('pffHeader', function(){
     $scope.postPage = function(){
       location.assign('/#/videopost');
     }
+    $scope.videoList = function(){
+      location.assign('/#/videolist');
+    }
   }
   return{
     templateUrl:
