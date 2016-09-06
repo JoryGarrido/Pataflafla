@@ -1,7 +1,7 @@
 <main id="videoSheetContainer">
   <iframe id="video" ng-src="{{view.trustSrc}}" frameborder="0" allowfullscreen></iframe>
   <div id="sheet">
-    <section id="uploadImageContainer" ng-show="loggedIn">
+    <section id="uploadImageContainer" ng-show="loggedIn && !showImg">
       <form ng-submit="uploadImage();">
         <section id="imageInput">
           <label>Imgur URL</label>
@@ -10,6 +10,7 @@
         <button>Upload Imgur image</button>
       </form>
     </section>
+    <img src="{{view.imgUrl}}" id="sheetImg">
   </div>
 </main>
 <section>

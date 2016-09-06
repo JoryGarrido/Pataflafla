@@ -6,6 +6,7 @@ var jwt = require('jsonwebtoken');
 
 var videoManager = require('./lib/videoManager.js');
 var userManager = require('./lib/userManager.js');
+var imageManager = require('./lib/imageManager.js');
 
 var app = express();
 
@@ -29,8 +30,9 @@ app.post('/api/signup', userManager.signup);
 app.post('/api/login', userManager.login);
 app.get('/api/video/:id', videoManager.getVideoById);
 app.get('/api/videolist', videoManager.getAllVideos);
+app.post('/api/uploadimage', imageManager.upload);
+app.get('/api/images/:id', imageManager.getImages)
 app.all('/*', function(req,res,next){
-  console.log('URL', req.url);
   res.redirect('/#' + req.url);
 });
 

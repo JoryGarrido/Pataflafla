@@ -7,37 +7,23 @@ exports.seed = function(knex, Promise) {
         // Inserts seed entries
           knex('videos')
           .insert({
-            name: 'Test1',
-            video_url: "https://www.youtube.com/watch?v=yF3lhhTgqvs",
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor',
+            name: "I'm On the John, Son MARCHING SNARE",
+            video_url: "https://www.youtube.com/watch?v=tz3wSbSiJIs",
+            description: 'New spree ya wanna know! via YouTube capture',
             user_id: 1
           }),
         knex('videos')
         .insert({
-          name: 'Test2',
-          video_url: "https://www.youtube.com/watch?v=oUlzrcpSPFE",
-          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor',
+          name: '16th Note Grid and Variations MARCHING SNARE',
+          video_url: "https://www.youtube.com/watch?v=cHAV_zPN8_U",
+          description: 'As with most grid exercises, this exercise presents some tricky accent pattern / pulse relationships. The pattern that usually presents the most difficulty is when the accent is on the "e". The key to this excercise is MARKING TIME!',
           user_id: 1
         }),
         knex('videos')
         .insert({
-          name: 'Test3',
-          video_url: "https://www.youtube.com/watch?v=mkcF4Mpp_y4",
-          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor',
-          user_id: 1
-        }),
-        knex('videos')
-        .insert({
-          name: 'Test4',
-          video_url: "https://www.youtube.com/watch?v=RgvfU-1ycUs",
-          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor',
-          user_id: 1
-        }),
-        knex('videos')
-        .insert({
-          name: 'Test5',
-          video_url: "https://www.youtube.com/watch?v=3PfDkGcSNE0",
-          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor',
+          name: 'Debussy Clair De Lune PIANO',
+          video_url: "https://www.youtube.com/watch?v=4fvo_iOuSck",
+          description: 'This is one of my favorite pieces! I thought I would post this video asking for critique and you are more than welcome to play along with me. :)',
           user_id: 1
         })
       ]);
