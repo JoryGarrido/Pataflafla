@@ -1,7 +1,8 @@
 var app = angular.module("diddle", ['ngRoute']);
 
-app.config(function ($httpProvider) {
+app.config(function ($httpProvider, $locationProvider) {
   $httpProvider.interceptors.push('jwtInterceptor');
+  $locationProvider.html5Mode(true);
 })
 .service('jwtInterceptor', function jwtInterceptor(){
   return {
@@ -12,4 +13,4 @@ app.config(function ($httpProvider) {
       return config;
     }
   };
-})
+});

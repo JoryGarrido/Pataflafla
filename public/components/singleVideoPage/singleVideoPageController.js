@@ -1,5 +1,10 @@
 app.controller('singleVideoPageController', function($scope,$location,$http,$sce){
   $scope.view = {};
+  $scope.disqusConfig = {
+    disqus_shortname: 'diddle',
+    disqus_identifier: location.href.split('video/')[2],
+    disqus_url: location.href.split('video/')[1]
+  };
 
   var arr = location.hash.split('/');
   $http({
