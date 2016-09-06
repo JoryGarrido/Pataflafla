@@ -1,11 +1,20 @@
 <main id="videoSheetContainer">
   <iframe id="video" ng-src="{{view.trustSrc}}" frameborder="0" allowfullscreen></iframe>
-  <div id="sheet"></div>
+  <div id="sheet">
+    <section id="uploadImageContainer" ng-show="view.decoded">
+      <button>Upload Imgur image</button>
+      <form>
+        <label>Imgur URL</label>
+        <input ng-model="image_url" type="text">
+      </form>
+    </section>
+  </div>
 </main>
 <section>
   <div id="contents">
-    <h1>Title</h1>
-    <p>description</p>
+    <h1>{{view.title}}</h1>
+    <p>{{view.description}}</p>
+
   </div>
   <div id="disqus_thread"></div>
 </section>

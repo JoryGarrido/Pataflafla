@@ -1,4 +1,5 @@
 app.controller('videopostController', function($scope, $http, $location){
+  $scope.decoded.id = [];
   $scope.videoPost = function (){
     $http({
       method: 'POST',
@@ -11,10 +12,8 @@ app.controller('videopostController', function($scope, $http, $location){
       }
     })
     .then(function successCallback(response) {
-      console.log('VIDEOPOSTED',response);
       Window.location('/video')
       }, function errorCallback(response) {
-        console.log(response);
         $location.url('/');
       });
   }
