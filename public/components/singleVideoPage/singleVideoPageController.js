@@ -1,5 +1,4 @@
 app.controller('singleVideoPageController', function($scope,$location,$http,$sce){
-  $scope.uploadImage = false;
   $scope.view = {};
 
   var arr = location.href.split('video/');
@@ -11,12 +10,18 @@ app.controller('singleVideoPageController', function($scope,$location,$http,$sce
     $scope.view.title = data.data.data[0].name;
     $scope.view.description = data.data.data[0].description;
     $scope.view.videoUrl = data.data.data[0].video_url;
+    $scope.view.userId = data.data.data[0].user_id;
     var urlArr = $scope.view.videoUrl.split('=');
     $scope.url = "https://youtube.com/embed/" + urlArr[1];
     $scope.view.trustSrc = $sce.trustAsResourceUrl($scope.url);
 
     $scope.view.decoded = data.data.decoded;
-    console.log($scope.view.decoded);
+
+    if ($scope.view.decoded.id === $scope.view.userId) {
+      $scope.loggedIn = true;
+    } else {
+      $scope.loggedIn = false
+    }
   });
 
   var disqus_config = function () {
@@ -30,12 +35,17 @@ app.controller('singleVideoPageController', function($scope,$location,$http,$sce
       (d.head || d.body).appendChild(s);
   })();
 
-  (function() {
-    if ($scope.view.decoded) {
-      $scope.loggedIn = true;
-    } else {
-      $scope.loggedIn = false
-    }
-  })();
 
+  $scope.uploadImage = function(){
+    $http({
+      method: 'POST',
+      path: '/api/uploadimage',
+      data: {
+        image_url: $scope.imageUrl;
+      }
+    })
+    .then(function(){
+      location.assign = (location.href);
+    });
+  }
 });

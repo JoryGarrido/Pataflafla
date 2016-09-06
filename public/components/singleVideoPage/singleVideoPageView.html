@@ -1,11 +1,13 @@
 <main id="videoSheetContainer">
   <iframe id="video" ng-src="{{view.trustSrc}}" frameborder="0" allowfullscreen></iframe>
   <div id="sheet">
-    <section id="uploadImageContainer" ng-show="view.decoded">
-      <button>Upload Imgur image</button>
-      <form>
-        <label>Imgur URL</label>
-        <input ng-model="image_url" type="text">
+    <section id="uploadImageContainer" ng-show="loggedIn">
+      <form ng-submit="uploadImage();">
+        <section id="imageInput">
+          <label>Imgur URL</label>
+          <input ng-model="imageUrl" type="text">
+        </section>
+        <button>Upload Imgur image</button>
       </form>
     </section>
   </div>
