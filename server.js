@@ -24,21 +24,19 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
 
-app.post('/signup', userManager.signup);
-app.post('/login', userManager.login);
-app.get('/video/:id', videoManager.getVideoById);
-app.get('/videolist', videoManager.getAllVideos);
+
+app.post('/api/signup', userManager.signup);
+app.post('/api/login', userManager.login);
+app.get('/api/video/:id', videoManager.getVideoById);
+app.get('/api/videolist', videoManager.getAllVideos);
+app.all('/*', function(req,res,next){
+  console.log('URL', req.url);
+  res.redirect('/#' + req.url);
+});
 
 app.use(userManager.verify);
 
-app.post('/videopost', videoManager.upload);
-
-
-//TEST
-app.get('/protected',function (req,res,next) {
-  res.send("Identity Confirmed!");
-});
-
+app.post('/api/videopost', videoManager.upload);
 
 
 

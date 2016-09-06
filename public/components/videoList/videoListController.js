@@ -7,7 +7,7 @@ app.controller('videoListController', function($scope,$http){
 
   $http({
     method: 'GET',
-    url: '/videolist'
+    url: 'api/videolist'
   })
   .then(function(data){
     $scope.view.videos = data.data;

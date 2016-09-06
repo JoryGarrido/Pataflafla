@@ -4,7 +4,7 @@ app.controller('signupController', function($scope, $http, $location){
   $scope.signup = function(){
     $http({
       method: 'POST',
-      url: '/signup',
+      url: 'api/signup',
       data: {
         email: $scope.signupEmail,
         password: $scope.signupPassword
@@ -19,7 +19,7 @@ app.controller('signupController', function($scope, $http, $location){
   $scope.login = function(){
     $http({
       method: 'POST',
-      url: '/login',
+      url: 'api/login',
       data: {
         email: $scope.loginEmail,
         password: $scope.loginPassword

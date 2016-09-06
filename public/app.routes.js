@@ -4,7 +4,7 @@ app.config(function($routeProvider) {
       templateUrl: 'components/landing/landingView.html',
       controller: 'landingController'
     })
-    .when('/signup', {
+    .when('/user/signup', {
       templateUrl: 'components/signup/signupView.html',
       controller: 'signupController'
     })
