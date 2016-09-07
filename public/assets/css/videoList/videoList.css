@@ -6,6 +6,7 @@
   background-color: #67AAF9;
   align-items: center;
   justify-content: space-between;
+  overflow-y: scroll;
 }
 
 .video {

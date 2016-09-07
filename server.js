@@ -15,6 +15,7 @@ app.use(bearerToken());
 app.use(function (req,res,next) {
   if (req.token) {
     req.decoded = jwt.decode(req.token);
+    console.log('decode', req.decoded);
     next();
   } else {
     next();

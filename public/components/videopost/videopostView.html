@@ -1,11 +1,22 @@
 <main>
-  <form ng-submit="videoPost()">
-    <label for="">Title</label>
-    <input ng-model="title" type="text">
-    <label for="">Description</label>
-    <input ng-model="description" type="text">
-    <label for="">Video URL</label>
-    <input ng-model="videoUrl" type="text">
-    <input type="submit">
-  </form>
+  <section id="loginContainer">
+    <form action="" method="post" class="elegant-aero2">
+      <h1>Post a Video</h1>
+      <label>
+        <input type="text" ng-model="title" placeholder="Title" />
+      </label>
+
+      <label>
+        <input type="text" ng-model="description" placeholder="Description" />
+      </label>
+
+      <label>
+        <input type="text" ng-model="videoUrl" placeholder="YouTube URL" />
+      </label>
+      <label>
+        <span>&nbsp;</span>
+        <input type="button" class="button" value="Submit" ng-click="videoPost();"/>
+      </label>
+    </form>
+  </section>
 </main>

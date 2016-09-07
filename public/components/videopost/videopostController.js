@@ -12,7 +12,7 @@ app.controller('videopostController', function($scope, $http, $location){
       }
     })
     .then(function successCallback(response) {
-      Window.location('/video')
+      $location.location('/video')
       }, function errorCallback(response) {
         $location.url('/');
       });

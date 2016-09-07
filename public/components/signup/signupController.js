@@ -26,7 +26,7 @@ app.controller('signupController', function($scope, $http, $location){
       }
     }).then(function successCallback(response) {
       localStorage.jwt = response.data.token;
-      $location.url('/');
+      $location.url('/videolist');
       }, function errorCallback(response) {
         console.log(response);
         next();

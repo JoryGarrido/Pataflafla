@@ -8,6 +8,10 @@ app.config(function($routeProvider) {
       templateUrl: 'components/signup/signupView.html',
       controller: 'signupController'
     })
+    .when('/user/login', {
+      templateUrl: 'components/login/loginView.html',
+      controller: 'signupController'
+    })
     .when('/videopost', {
       templateUrl: 'components/videopost/videopostView.html',
       controller: 'videopostController'

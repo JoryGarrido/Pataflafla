@@ -8,11 +8,11 @@
         </header>
         <form>
           <div id="inputs">
-            <input type="email" placeholder="email address">
-            <input type="password" placeholder="password">
+            <input type="email" ng-model="landingEmail" placeholder="email address">
+            <input type="password" ng-model="landingPassword" placeholder="password">
           </div>
           <div id="submit">
-            <button id='submitButton' ng-click="">Submit</button>
+            <button id='submitButton' ng-click="signup();">Submit</button>
           </div>
         </form>
       </div>

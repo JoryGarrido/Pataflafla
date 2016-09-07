@@ -7,6 +7,7 @@ app.controller('singleVideoPageController', function($scope,$location,$http,$sce
     url: 'api/video/' + arr[1]
   })
   .then(function(data){
+    console.log('data', data.data);
     $scope.userId = data.data.data[0].user_id;
     $scope.decoded = data.data.decoded;
     $scope.videoId = data.data.data[0].id;
