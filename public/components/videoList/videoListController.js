@@ -4,7 +4,6 @@ app.controller('videoListController', function($scope,$http){
     var arr = id.split('=');
     location.assign('/#/video/' + arr[1]);
   }
-
   $http({
     method: 'GET',
     url: 'api/videolist'
