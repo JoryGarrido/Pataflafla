@@ -3,16 +3,12 @@
 module.exports = {
 
   development: {
-    client: 'postgresql',
+    client: 'pg',
     connection: 'postgres://localhost:5432/diddle'
   },
 
   production: {
     client: 'pg',
-    connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
-    }
+    connection: process.env.DATABASE_URL
   }
 };
