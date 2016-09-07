@@ -1,7 +1,15 @@
 <section id="videoListContainer">
   <div class="video" ng-repeat="video in view.videos" ng-click="goToVid(video.video_url);">
-    <div class="fakeImg"></div>
-    <p class="listTitle">{{video.name}}</p>
-    <p class="description">{{video.description}}</p>
+    <div class="videoListContent">
+      <div class="listImg">
+        <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-productivity-1/128/play-icon-2-128.png">
+      </div>
+    </div>
+    <div class="videoListContent">
+      <p class="listTitle">{{video.name}}</p>
+    </div>
+    <div class="videoListContent">
+      <p class="description">{{video.description}}</p>
+    </div>
   </div>
 </section>

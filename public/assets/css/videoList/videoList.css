@@ -3,28 +3,29 @@
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  background-color: green;
+  background-color: #67AAF9;
   align-items: center;
   justify-content: space-between;
 }
 
 .video {
   width: 100%;
-  height: 20%;
-  background-color: red;
-  /*margin: 10px;*/
+  height: 30%;
+  background-color: #9BBDF9;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  cursor: pointer;
 }
-.description {
+.videoListContent {
   width: 33%;
-  overflow: hidden;
 }
-
-.fakeImg {
-  height: 90%;
-  width: 10%;
-  background-color: yellow;
+.listImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.listImg img {
+  width: 20%;
 }

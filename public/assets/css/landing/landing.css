@@ -123,21 +123,15 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2em;
+  font-size: 20px;
   margin-top: 5%;
 }
 .users img {
-  width: 45%;
+  width: 30%;
   margin: 1%;
 }
 .image {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#teacher {
-  border-right: 1px solid #23395B;
-}
-#creator {
-  border-right: 1px solid #23395B;
 }
